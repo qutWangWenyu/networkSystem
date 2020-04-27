@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!--设置日志使用log4f 防止加了spring-context 后不起作用 -->
+	<settings>
+		<setting name="logImpl" value="log4j" />
+	</settings>
+	<!-- 类型别名设置 -->
+	<typeAliases>
+		<package name="com.po" />
+	</typeAliases>
+	<!--映射文件的设置 -->
+	<mappers>
+		<!-- 使用类路径引入 -->
+		<mapper resource="com/mapper/NoticeTableMapper.xml" />
+		<mapper resource="com/mapper/BuserMapper.xml" />
+		<mapper resource="com/mapper/AuserMapper.xml" />
+		<mapper resource="com/mapper/GoodsTypeMapper.xml" />
+		<mapper resource="com/mapper/AddTypeMapper.xml" />
+		<mapper resource="com/mapper/DeleteTypeMapper.xml" />
+		<mapper resource="com/mapper/GoodsTableMapper.xml" />
+		<mapper resource="com/mapper/CartTableMapper.xml" />
+		<mapper resource="com/mapper/FocusTableMapper.xml" />
+		<mapper resource="com/mapper/OrderDetailMapper.xml" />
+		<mapper resource="com/mapper/BuserAndOrderBaseTableMapper.xml" />
+		<!-- 使用命名空间引入 -->
+	</mappers>
+</configuration>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.GoodsTableDao">
+	<select id="selectGoodsTable" resultType="com.po.GoodsTable">
+		select * from goodstable
+	</select>
+	<select id="selectGoodsTableByID" resultType="com.po.GoodsTable" parameterType="Integer">
+		select*from goodstable where id=#{id}
+	</select>
+	<insert id="insertIntoGoodsTable" parameterType="com.po.Goods">
+		insert into goodstable (id, gname, goprice, grprice, gstore, gpicture, goodstype_id)
+		values(null, #{gname}, #{goprice}, #{grprice}, #{gstore}, #{gpicture}, #{goodstype_id})
+	</insert>
+	<!-- 根据id查询一个商品 -->
+	<select id="selectGoods4ById" resultType="com.po.Goods4">
+		select gt.*,gy.typename from goodstable gt,goodstype gy where gt.id=#{id}
+		and gt.goodstype_id=gy.id
+	</select>
+	<update id="updateGoodsById" parameterType="com.po.Goods">
+		update goodstable
+		<trim prefix="set" suffixOverrides=",">
+			<if test="gname!=null">gname=#{gname},</if>
+			<if test="goprice!=null">goprice=#{goprice},</if>
+			<if test="grprice!=null">grprice=#{grprice},</if>
+			<if test="gstore!=null">gstore=#{gstore},</if>
+			<if test="gpicture!=null">gpicture=#{gpicture},</if>
+			<if test="goodstype_id!=null">goodstype_id=#{goodstype_id},</if>
+		</trim>
+		where id=#{id}
+	</update>
+	<delete id="deleteGoodsById" parameterType="Integer">
+		delete from goodstable where id=#{id}
+	</delete>
+	
+	
+	<!-- 查询销售排行 -->
+	<select id="getSaleOrder" resultType="com.po.Goods2">
+		select sum(od.shoppingnum) shoppingnum, 
+		gd.id id, gd.gname gname, gd.goprice goprice, gd.grprice grprice, gd.gpicture gpicture
+		from GOODSTABLE gd LEFT JOIN ORDERDETAIL od ON od.goodstable_id=gd.id
+		group by 
+		gd.id, gd.gname, gd.goprice, gd.grprice, gd.gpicture
+		order by shoppingnum desc limit 10
+	</select>
+	<!-- 人气排行 -->
+	<select id="getFocusOrder" resultType="com.po.Goods3">
+		select count(ft.goodstable_id) fn, gt.id id, gt.gname gname, 
+		gt.grprice grprice, gt.gpicture gpicture
+		from GOODSTABLE gt 
+		left join focustable ft on ft.goodstable_id=gt.id 
+		group by gt.id, gt.gname, gt.grprice, gt.gpicture 
+		order by fn desc limit 10
+	</select>
+	<!-- 公告 -->
+	<select id="selectNotice" resultType="com.po.NoticeTable">
+		select * from noticetable order by ntime desc
+	</select>
+	<!-- 最新商品 -->
+	<select id="getLastedGoods" resultType="com.po.Goods4">
+		select gt.*, gy.typename from goodstable gt, goodstype gy 
+		where gt.goodstype_id=gy.id order by gt.id desc
+	</select>
+	<!-- 首页搜索 -->
+	<select id="search" resultType="com.po.Goods4" parameterType="String">
+		select gt.*, gy.typename from GOODSTABLE gt, GOODSTYPE gy where
+		gt.goodstype_id=gy.id
+		and gt.gname like concat('%',#{mykey},'%')
+		
+		<!-- select gt.*, gy.typename from GOODSTABLE gt, GOODSTYPE gy where
+		gt.goodstype_id=gy.id
+		and gt.gname like '%' || #{mykey} || '%' -->
+	</select>
+</mapper>

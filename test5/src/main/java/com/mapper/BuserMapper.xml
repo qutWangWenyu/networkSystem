@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.BuserTableDao">
+	<select id="selectBuser" resultType="com.po.Buser">
+		select * from busertable
+	</select>
+	<delete id="deleteBuserById" parameterType="Integer">
+		delete from busertable where id=#{id}
+	</delete>
+	<insert id="register" parameterType="com.po.Buser">
+		insert into busertable (id, bemail, bpwd) values(null,#{bemail},#{bpwd})
+	</insert>
+	<select id="selectBuserById" resultType="com.po.Buser" parameterType="com.po.Buser">
+		select * from busertable where bemail=#{bemail} and bpwd=#{bpwd}
+	</select>
+</mapper>

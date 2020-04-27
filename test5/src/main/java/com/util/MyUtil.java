@@ -1,0 +1,23 @@
+package com.util;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.servlet.http.HttpSession;
+
+import com.po.Buser;
+
+public class MyUtil {
+	public static String getStringID() {
+		String id = null;
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHssSSS");
+		id = sdf.format(date);
+		return id;
+	}
+
+	public static Integer getUserId(HttpSession session) {
+		Buser ruser = (Buser) session.getAttribute("bruser");
+		return ruser.getId();
+	}
+}
