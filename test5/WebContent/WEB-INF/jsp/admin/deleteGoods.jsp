@@ -15,9 +15,10 @@
         <td>名称<font color="red">*</font></td>
         <td><form:input path="gname"/></td>
       </tr>
+         <td>
           <form:delete path="goodstype_id">
             <form:options items="$GoodsType" itemLabel="typename" itemValue="id"/>
-          </form:select></td>
+            </form:delete></td>
       </tr>
        <tr>
         <td><input type="submit" value="提交"></td>

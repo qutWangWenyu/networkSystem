@@ -27,7 +27,7 @@
   </tr>
   <tr>
     <td>图片</td>
-    <td><c:if test="${goods.gpicture!='' }"><img alt="" width="250" height="250" src="logos/${goods.gpicture }"</c:if></td>
+    <td><c:if test="${goods.gpicture!='' }"><img alt="" width="250" height="250" src="logos/${goods.gpicture }"></c:if></td>
   </tr>
   <tr>
     <td>类型</td>
