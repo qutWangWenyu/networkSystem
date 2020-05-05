@@ -5,13 +5,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>修改商品</title>
+<title>修改房源</title>
 <link href="css/admin/common.css" type="text/css" rel="stylesheet">
 </head>
 <body>
  <form:form action="${pageContext.request.contextPath }/adminGoods/updateAgood?id=${goods.id }" method="post" modelAttribute="goods" enctype="multipart/form-data">
     <table border=1 style="border-collapse:collapse">
-      <caption><font size=4 face=华文新魏>添加商品</font></caption>
+      <caption><font size=4 face=华文新魏>添加房源</font></caption>
       <tr>
         <td>名称<font color="red">*</font></td>
         <td><form:input path="gname"/></td>

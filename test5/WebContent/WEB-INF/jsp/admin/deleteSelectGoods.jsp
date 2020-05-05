@@ -38,7 +38,7 @@
   			window.location.href = "/test5/adminGoods/deleteManyGoods?ids="+s;
   		}
   		function checkDel(id){
-  			if(window.confirm("是否删除该商品？")){
+  			if(window.confirm("是否删除该房源？")){
   				window.location.href = "/test5/adminGoods/deleteAGoods?id="+id;
   			}
   		}
@@ -64,7 +64,7 @@
 </style>
 </head>
 <body>
-<c:if test="${allGoods.size()==0 }">您还没有商品</c:if>
+<c:if test="${allGoods.size()==0 }">您还没有房源</c:if>
 <c:if test="${allGoods.size()!=0 }">
  <table border="1" bordercolor="PaleGreen">
   <tr>

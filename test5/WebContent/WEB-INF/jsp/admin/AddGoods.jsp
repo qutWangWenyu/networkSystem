@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>添加商品</title>
+<title>添加房源</title>
 <link href="css/admin/common.css" type="text/css" rel="stylesheet">
 </head>
 <body>
@@ -14,7 +14,7 @@
 		method="post" modelAttribute="goods" enctype="multipart/form-data">
 		<table border=1 style="border-collapse: collapse">
 			<caption>
-				<font size=4 face=华文新魏>添加商品</font>
+				<font size=4 face=华文新魏>添加房源</font>
 			</caption>
 			<tr>
 				<td>名称<font color="red">*</font></td>

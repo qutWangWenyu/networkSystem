@@ -5,12 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>删除商品</title>
+<title>删除房源</title>
 </head>
 <body>
   <form:form action="${pageContext.request.contextPath }/adminGoods/AddGoods" method="post" modelAttribute="goods" enctype="multipart/form-data">
     <table border=1 style="border-collapse:collapse">
-      <caption><font size=4 face=华文新魏>删除商品</font></caption>
+      <caption><font size=4 face=华文新魏>删除房源</font></caption>
       <tr>
         <td>名称<font color="red">*</font></td>
         <td><form:input path="gname"/></td>

@@ -42,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div class="block clearfix">
 		<!--当前位置-->
 		<div class="location ared">
-			当前位置： <a href="before?id=0">首页</a> > 购物流程 > 购物车
+			当前位置： <a href="before?id=0">首页</a> > 租赁流程 > 购物车
 		</div>
 		<div class="blank"></div>
 		<div>
@@ -50,7 +50,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<table width="99%" align="center" border="0" cellpadding="5"
 					cellspacing="1" bgcolor="#dddddd">
 					<tr>
-						<th>商品信息</th>
+						<th>房源信息</th>
 						<th>单价（元）</th>
 						<th>数量</th>
 						<th>小计</th>
@@ -86,7 +86,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<td align="right" bgcolor="#ffffff" colspan="4" height="41px;"
 							style="border-left: 0 none;"><font
 							style="color: #a60401; font-size: 13px; font-weight: bold; letter-spacing: 0px;">
-								购物金额总计(不含运费) ￥&nbsp;<span id="stotal"></span>
+								租金总计(不含运费) ￥&nbsp;<span id="stotal"></span>
 							${total}元
 						</font></td>
 						<td align="center" bgcolor="#ffffff"><input type="button"

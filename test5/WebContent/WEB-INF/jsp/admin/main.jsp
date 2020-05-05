@@ -108,10 +108,10 @@ body {
 		<ul>
 			<li><a>商品管理</a>
 				<ul>
-					<li><a href="${pageContext.request.contextPath }/adminGoods/toAddGoods" target="center">添加商品</a></li>
-					<li><a href="${pageContext.request.contextPath }/adminGoods/deleteGoods" target="center">删除商品</a></li>
-					<li><a href="${pageContext.request.contextPath }/adminGoods/upGoods" target="center">修改商品</a></li>
-					<li><a href="${pageContext.request.contextPath }/adminGoods/selectGoods" target="center">查询商品</a></li>
+					<li><a href="${pageContext.request.contextPath }/adminGoods/toAddGoods" target="center">添加房源</a></li>
+					<li><a href="${pageContext.request.contextPath }/adminGoods/deleteGoods" target="center">删除房源</a></li>
+					<li><a href="${pageContext.request.contextPath }/adminGoods/upGoods" target="center">修改房源</a></li>
+					<li><a href="${pageContext.request.contextPath }/adminGoods/selectGoods" target="center">查询房源</a></li>
 				</ul>
 			</li>
 			<li><a>类型管理</a>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>商品详情</title>
+<title>房源详情</title>
 </head>
 <body>
 <table border="1" style="border-collapse:collapse">

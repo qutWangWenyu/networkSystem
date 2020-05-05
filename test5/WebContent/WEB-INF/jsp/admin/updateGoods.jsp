@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>商品详情</title>
+<title>房源详情</title>
 <link href="css/admin/common.css" type="text/css" rel="stylesheet">
 	<style type="text/css">
 		table{

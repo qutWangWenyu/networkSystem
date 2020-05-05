@@ -24,10 +24,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<table width="99%" align="center" border="0" cellpadding="5"
 					cellspacing="1" bgcolor="#dddddd">
 					<tr>
-						<th>商品编号</th>
-						<th>商品名称</th>
-						<th>商品图片</th>
-						<th>商品价格</th>
+						<th>网点编号</th>
+						<th>网点名称</th>
+						<th>网点图片</th>
+						<th>网点价格</th>
 						<th>去看看</th>
 					</tr>
 					<tr>

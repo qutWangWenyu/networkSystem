@@ -36,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </script>
 </head>
 <body>
-	<c:if test="${allNotices.size() == 0 }">您还没有商品。</c:if>
+	<c:if test="${allNotices.size() == 0 }">您还没有房源信息。</c:if>
 	<c:if test="${allNotices.size() != 0 }">
 		<table border="1" bordercolor="PaleGreen">
 			<tr>

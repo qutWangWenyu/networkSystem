@@ -4,7 +4,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<jsp:include page="jsp\before\head.jsp"></jsp:include>
+<jsp:include page="WEB-INF\jsp\before\head.jsp"></jsp:include>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -102,7 +102,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class="box_color ared">
 						<div class="title_bt">
 							<span><a href="#">更多</a></span>
-							<h3>最新商品</h3>
+							<h3>最新房源</h3>
 						</div>
 						<div class="itemgood_nr clearfix">
 							<ul>
